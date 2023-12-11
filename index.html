@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paperkez Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="" href="/images/Stickers.png"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css">
+</head>
+<body>
+    <div id="header">
+
+    <div class="container">
+       <nav> <img src="/images/Stickers.png"  class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li> <a href="https://www.instagram.com/keziasheen/"><i class="ri-instagram-line"></i></a></li>
+<i class="ri-close-line" onclick="closemenu()"></i>
+</ul> 
+        <i class="ri-menu-line" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        
+        
+        <div class="txt"><p style="font-family: monospace;">Visual Arts</p>
+        <h1 style="font-family: monospace; color: bisque;">Paperkez</h1></div>
+        <img src="/images/Screenshot_20231205_162126_Chrome.jpg" alt="">
+        
+    </div>
+    </div>
+    </div>
+
+    <!-- ---------------ABOUT--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="/images/Copy of 1000050904-01.jpeg" alt="">
+                </div>
+                <div class="col-2">
+                    <h1 class="sub-title" style="font-family: monospace;">About </h1>
+                    <p>Paperkez was founded during the pandemic to be able to express my creativity. I have sold multiple original art pieces, handmade gifts, prints, cards, and more. The experience gained from creating and selling art has been far more influential than I had expected it to be and as a result, my passion for art has grown stronger. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('mission')">Mission</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li><span>Painting</span><br>Water colour and Acrylic on canvas.</li>
+                            <li><span>Stitching.</span><br>Diaries and bags.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Online</span><br>Sold art via Instagram. Digital marketing skills improved.</li>
+                            <li><span>Stalls</span><br>Kept stalls multiple times around Bangalore and Mysore. Social skills improved greatly.</li>
+                            <li><span>Workshops</span><br>Conducted various workshops in schools and cafes, including grafati workshop as well.</li>
+                            <li><span>Mural</span><br>Painted murals at different locations including my University, cafes and a library in Mysore.</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="mission"><p>To bring the joy of art and handmade products to people’s lives. I believe in the power of art bringing joy, healing, and connections to our lives.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------GALLERY------------------>
+    <div id="gallery">
+        <div class="container">
+            <h1 class="sub-title" >Gallery</h1>
+            <div class="gallery-list">
+                <div id="a">
+                    <!-- <i class="ri-arrow-down-line"></i> -->
+                    <center><div><h2>CARDS</h2>
+                    <p>Hand-painted cards for verious occasions.</p>
+                    <a href="/cards.html">View More</a></div></center>
+                </div>
+                <div id="b">
+                    <center><div><h2>PORTRAITS</h2>
+                    <p>A meaningful way to capture a smile.</p>
+                    <a href="/portraits.html">View More</a></div></center>
+                </div>
+                <div id="c">
+                   <center><div><h2>MURALS</h2>
+                    <p>Wall paintings at different locations.</p>
+                    <a href="/murals.html">View More</a></div></center>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+    <!-- -------------------CONTACT------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                
+                <div class="contact-left">
+                    <h1 class="sub-title" id="con">Contact</h1>
+                   <!-- <br><br><br><br><br><br> -->
+
+                    <p><i class="ri-mail-line"></i> paperkez@gmail.com</p>
+                    <p><i class="ri-whatsapp-line"></i> 9448240378</p>
+                    <p><i class="ri-instagram-line"></i>@keziasheen </p>
+                        <!-- <p> <a href="https://www.instagram.com/keziasheen/"><i class="ri-instagram-line"></i>@keziasheen </p> -->
+                    <!-- <div class="social-icons">
+                        <a href="https://www.instagram.com/keziasheen/"><i class="ri-instagram-line"></i></a> -->
+                        <!-- <a href=""><i class="ri-whatsapp-line"></i></i></a>
+                        <a href=""><i class="ri-mail-line"></i></a> -->
+
+
+                    <!-- </div> -->
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links")
+        var tabcontents =document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    
+</body>
+</html>
